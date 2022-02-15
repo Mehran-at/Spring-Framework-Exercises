@@ -1,7 +1,6 @@
 package com.kingcode.springqualifier.controller;
 
 
-import com.kingcode.springqualifier.service.GreetingEnglishService;
 import com.kingcode.springqualifier.service.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -10,7 +9,7 @@ import org.springframework.stereotype.Controller;
 public class I18nController {
     private final GreetingService greetingService;
 
-    public I18nController(@Qualifier("greetingEnglishService") GreetingEnglishService greetingService) {
+    public I18nController(@Qualifier("greetingSpanishService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

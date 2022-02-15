@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-@Qualifier("greetingEnglishService")
+//@Qualifier("greetingEnglishService")
 public class GreetingEnglishService implements GreetingService {
     @Override
     public String sayHello() {
