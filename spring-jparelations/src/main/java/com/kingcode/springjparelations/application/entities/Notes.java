@@ -1,18 +1,20 @@
-package com.kingcode.springjparelations.application.Entities;
+package com.kingcode.springjparelations.application.entities;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-public class Category {
+public class Notes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToMany(mappedBy = "categories")
-    private Set<Recipe> recipe;
+    @Lob
+    private String recipeNotes;
+    @OneToOne
+    private Recipe recipe;
+
 }

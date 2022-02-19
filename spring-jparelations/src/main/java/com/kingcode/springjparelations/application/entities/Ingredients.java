@@ -1,4 +1,4 @@
-package com.kingcode.springjparelations.application.Entities;
+package com.kingcode.springjparelations.application.entities;
 
 import lombok.Getter;
 import lombok.Setter;

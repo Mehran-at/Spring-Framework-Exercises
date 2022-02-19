@@ -1,4 +1,4 @@
-package com.kingcode.springjparelations.application.Entities;
+package com.kingcode.springjparelations.application.entities;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,4 +22,7 @@ public class Recipe {
     private Set<Ingredients> ingredients;
     @Enumerated(value = EnumType.STRING)
     private Level level;
+    @Lob
+    private Byte[] image;
+    private String description;
 }
