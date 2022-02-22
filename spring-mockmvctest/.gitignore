@@ -31,14 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+/.mvn/
 /mvnw
 /mvnw.cmd
-/.mvn/
-!/.mvn/
-
-!/mvnw
-
-!/mvnw.cmd
-
-!/spring-datajpatest.iml
-/spring-datajpatest.iml
+/spring-mockmvctest.iml
