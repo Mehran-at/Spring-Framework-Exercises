@@ -2,6 +2,7 @@ package com.kingcode.springmockmvctest.application.controller;
 
 import com.kingcode.springmockmvctest.application.entities.Recipe;
 import com.kingcode.springmockmvctest.application.service.RecipeService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -62,10 +63,10 @@ class IndexControllerTest {
         String viewName = controller.getIndexPage(model);
 
         //then
-        assertEquals("index", viewName);
+        Assertions.assertEquals("index", viewName);
         verify(recipeService, times(1)).getRecipes();
         verify(model, times(1)).addAttribute(eq("recipes"), argumentCaptor.capture());
         Set<Recipe> setInController = argumentCaptor.getValue();
-        assertEquals(2, setInController.size());
+        Assertions.assertEquals(2, setInController.size());
     }
 }
